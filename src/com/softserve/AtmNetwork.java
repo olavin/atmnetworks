@@ -16,7 +16,7 @@ public class AtmNetwork {
     }
 
     public void createBanksList(){
-        banksListCreator.createBanksList();
+        banksList = banksListCreator.createBanksList();
     }
 
 
