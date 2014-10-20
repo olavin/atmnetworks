@@ -8,17 +8,11 @@ import java.util.List;
 public class AtmNetwork {
     private String name;
     private List<BankEntry> banksList = null;
-    private IBanksListCreator  banksListCreator = null;
 
     AtmNetwork(String name, IBanksListCreator creator){
         this.name = name;
-        banksListCreator = creator;
+        banksList = creator.createBanksList();
     }
-
-    public void createBanksList(){
-        banksList = banksListCreator.createBanksList();
-    }
-
 
     public String getName(){
         return name;
