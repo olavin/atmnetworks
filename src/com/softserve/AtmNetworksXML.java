@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class AtmNetworksXML {
 
-    public static void createXML(List<AtmNetwork> networks){
+    public static void createXML(List<AtmNetwork> networks, String filename){
         //TODO: write method
     }
 

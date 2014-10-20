@@ -13,7 +13,7 @@ public class Main {
         atmNetworks.add(new AtmNetwork("Радіус", new RadiusBanksListCreator("http://ubanks.com.ua/atmnet/radius.php")));
         atmNetworks.add(new AtmNetwork("УкрКард", new UkrcardBanksListCreator("http://www.ukrcard.com.ua/")));
 
-        AtmNetworksXML.createXML(atmNetworks);
+        AtmNetworksXML.createXML(atmNetworks, "atm_networks.xml");
 
     }
 }
