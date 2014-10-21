@@ -24,19 +24,29 @@ public class AtmosferaBanksListCreator implements IBanksListCreator {
         List<BankEntry> atmosferaBanks = new ArrayList<BankEntry>;
         try {
         Document doc = Jsoup.connect(networkUrl).get();
-        Elements names = doc.select("td.tab_line_mini");
-        Elements links = doc.select("a[href]");
-        
-        for (Element name : names) {
-         for (Element name : names) {      
-        atmosferaBanks.add(new BankEntry(name.text(), name.attr("href")));
+        Elements table = doc.select("tbody");
+        Elements rows = table.select("tr");
+        Elements names = rows.select("td.tab_line_mini");
+        Elements links = rows.select("td.a");
+
+
+            for (int i = 1; i < rows.size(); i++) { //first row is the col names so 
+
+skip it.
+                Element row = rows.get(i);
+                Element name = names.get(i);
+                Element link = links.get(i);
+
+                atmosferaBanks.add(new BankEntry(name.text(), link.attr("href")));
+            }
+
+
         } catch (IOException e) {
         e.printStackTrace();
         }
-        }
+
     
 
         return null; // List!
-    }
-
+}
 }
