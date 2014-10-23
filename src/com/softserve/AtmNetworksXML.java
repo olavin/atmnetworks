@@ -49,7 +49,7 @@ public class AtmNetworksXML {
         } catch (TransformerException e) {
             e.printStackTrace();
         }
-        System.out.println("file write!!");
+        System.out.println("File created: "+filename);
 
     }
     /**this method saved tags (Elements) link  and name  in bank. And bank saved in his network*/

@@ -1,13 +1,12 @@
 package com.softserve;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
         ArrayList<AtmNetwork> atmNetworks = new ArrayList<AtmNetwork>(5); // 5 will be enough
-
-        //bingSearch.findSiteByCompanyName("softserve");
 
         atmNetworks.add(new AtmNetwork("ПриватБанк", new PrivatBanksListCreator("https://privatbank.ua/")));
         atmNetworks.add(new AtmNetwork("АТМоСфера", new AtmosferaBanksListCreator("http://www.atmosphere.net.ua/ru/members_atmoshera_rus.htm?print&showAll=1")));
