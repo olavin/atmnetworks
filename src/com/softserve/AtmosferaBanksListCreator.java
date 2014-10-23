@@ -38,7 +38,7 @@ public class AtmosferaBanksListCreator implements IBanksListCreator {
               //  System.out.println(bankName);
               //  System.out.println(url);
                 atmosferaBanks.add(new BankEntry(bankName,bankUrl));    //Add elements to list
-                tmp = tmp.nextElementSibling();
+              //  tmp = tmp.nextElementSibling();
             }
             
         } catch (IOException e) {
